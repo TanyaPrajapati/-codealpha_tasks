@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./images/logo.jpg">
+</head>
+<body>
+  <div class="header">
+    <h1>Image Gallery</h1>
+  </div>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('animals')">Animals</button>
+    <button onclick="filterImages('food')">Food</button>
+    <button onclick="filterImages('travel')">Travel</button>
+    <button onclick="filterImages('flowers')">Flowers</button>
+  </div>
+
+  <div class="gallery">
+    <div class="image-card nature"><img src="images/img1.jpg" alt="Nature" onclick="openLightbox(this)" /></div>
+    <div class="image-card city"><img src="images/img2.jpg" alt="City" onclick="openLightbox(this)" /></div>
+    <div class="image-card animals"><img src="images/img3.jpg" alt="Animal" onclick="openLightbox(this)" /></div>
+    <div class="image-card nature"><img src="images/img4.jpg" alt="Nature" onclick="openLightbox(this)" /></div>
+    <div class="image-card city"><img src="images/img5.jpg" alt="City" onclick="openLightbox(this)" /></div>
+    <div class="image-card animals"><img src="images/img6.jpg" alt="Animal" onclick="openLightbox(this)" /></div>
+    <div class="image-card food"><img src="images/img7.jpg" alt="Food" onclick="openLightbox(this)" /></div>
+    <div class="image-card food"><img src="images/img8.jpg" alt="Food" onclick="openLightbox(this)" /></div>
+    <div class="image-card travel"><img src="images/img9.jpg" alt="Travel" onclick="openLightbox(this)" /></div>
+    <div class="image-card travel"><img src="images/img10.jpg" alt="Travel" onclick="openLightbox(this)" /></div>
+    <div class="image-card city"><img src="images/img11.jpg" alt="City" onclick="openLightbox(this)" /></div>
+    <div class="image-card flowers"><img src="images/img12.jpg" alt="Flowers" onclick="openLightbox(this)" /></div>
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" />
+    <div class="lightbox-controls">
+      <button onclick="changeImage(-1)">❮</button>
+      <button onclick="changeImage(1)">❯</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
